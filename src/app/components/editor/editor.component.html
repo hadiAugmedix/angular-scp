@@ -1,0 +1,15 @@
+<form action="" class="form-inline">
+  <div class="form-field">
+    <input type="text" name="patient_name" class="form-input" placeholder="e.g Patient name" [(ngModel)]="patient.name">
+  </div>
+  <div class="form-field">
+    <input type="text" name="patient_time" class="form-input" placeholder="e.g Time" [(ngModel)]="patient.createdAt">
+  </div>
+</form>
+
+<div class="form-field">
+  <textarea name="message" id="message" class="form-textarea" placeholder="e.g Write notes here!" [(ngModel)]="patient.notes" #message></textarea>
+  <small class="form-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
+</div>
+
+<button class="button">Remove patient</button>

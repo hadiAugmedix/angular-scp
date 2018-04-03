@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<section class="notewriter">
+  <div class="row">
+    <div class="large-2 columns">
+      <app-notewriter-action></app-notewriter-action>
+      <app-lists [patient]="patient" [activeIndex]="activePatientIndex"></app-lists>
+    </div>
+    <div class="large-8 columns">
+      <div class="_ck-editors">
+        <div class="_ck-editor" *ngFor="let p of patient; let i = index" [ngClass]="{'active': i === activePatientIndex}">
+          <app-editor [patient]="p" [activeIndex]="activePatientIndex"></app-editor>
+        </div>
+      </div>
+
+      <br><br>
+      <pre><code>{{ patient | json }}</code></pre>
+    </div>
+    <div class="large-2 columns">
+      <p>Other widgets</p>
+    </div>
+  </div>
+</section>

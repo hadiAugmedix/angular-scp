@@ -1,0 +1,9 @@
+<div class="notewriter-plist">
+  <a href="#" class="avatar" *ngFor="let p of patient; let i = index" [ngClass]="{'active': i === activeIndex}" (click)="setActiveIndex($event, i)">
+    <figure class="avatar-fig rounded">
+      <img src="https://picsum.photos/40/40?image=500" alt="">
+    </figure>
+    <span class="avatar-label">{{ p.name }}</span>
+    <div class="avatar-secondary-block">{{ p.createdAt }}</div>
+  </a>
+</div>
